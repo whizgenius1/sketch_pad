@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:provider/provider.dart';
 
 import 'general_provider.dart';
@@ -8,6 +9,14 @@ class RightToolBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+//     // create some values
+//     Color pickerColor = Color(0xff443a49);
+//     Color currentColor = Color(0xff443a49);
+//
+// // ValueChanged<Color> callback
+//     void changeColor(Color color) {
+//     pickerColor = color;
+//     }
     return Consumer<GeneralProvider>(builder: (context, gp, child) {
       return Positioned(
           top: 40.0,
@@ -42,16 +51,45 @@ class RightToolBar extends StatelessWidget {
                   ),
                 ),
               ),
+
+              SizedBox(height: 20),
+              GestureDetector(
+                  onTap: () => showDialog(
+                      context: context,
+                      builder: (_) => AlertDialog(
+                            title: Text(
+                              'Select Color',
+                              textAlign: TextAlign.center,
+                            ),
+                            content: SingleChildScrollView(
+                              child: ColorPicker(
+                                pickerColor: gp.selectedColour,
+                                onColorChanged: (Color color) =>
+                                    gp.setSelectedColor(color),
+                              ),
+                            ),
+                            actions: [
+                              TextButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  child: Text('Ok'))
+                            ],
+                          )),
+                  child: CircleAvatar(
+                    backgroundColor: gp.selectedColour,
+                  )),
               SizedBox(
-                height: 20,
+                height: 30,
               ),
+
+              // ColorPicker(
+              //   pickerColor: pickerColor,
+              //   onColorChanged: changeColor,
+              // ),
+              ///
               ColourButton(selectedColor: Colors.red),
-              ColourButton(selectedColor: Colors.blueAccent),
-              ColourButton(selectedColor: Colors.deepOrange),
-              ColourButton(selectedColor: Colors.green),
-              ColourButton(selectedColor: Colors.lightBlue),
+              ColourButton(selectedColor: Colors.blue),
+              ColourButton(selectedColor: Colors.yellow),
               ColourButton(selectedColor: Colors.black),
-              ColourButton(selectedColor: Colors.orange),
               ColourButton(selectedColor: Colors.white),
             ],
           ));
