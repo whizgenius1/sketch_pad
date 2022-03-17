@@ -9,14 +9,7 @@ class RightToolBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-//     // create some values
-//     Color pickerColor = Color(0xff443a49);
-//     Color currentColor = Color(0xff443a49);
-//
-// // ValueChanged<Color> callback
-//     void changeColor(Color color) {
-//     pickerColor = color;
-//     }
+
     return Consumer<GeneralProvider>(builder: (context, gp, child) {
       return Positioned(
           top: 40.0,
@@ -32,7 +25,7 @@ class RightToolBar extends StatelessWidget {
                 onTap: gp.clear,
                 child: CircleAvatar(
                   child: Icon(
-                    Icons.create,
+                    Icons.clear,
                     size: 20.0,
                     color: Colors.white,
                   ),
@@ -76,16 +69,13 @@ class RightToolBar extends StatelessWidget {
                           )),
                   child: CircleAvatar(
                     backgroundColor: gp.selectedColour,
+                    child: Icon(Icons.color_lens_outlined),
                   )),
               SizedBox(
                 height: 30,
               ),
 
-              // ColorPicker(
-              //   pickerColor: pickerColor,
-              //   onColorChanged: changeColor,
-              // ),
-              ///
+
               ColourButton(selectedColor: Colors.red),
               ColourButton(selectedColor: Colors.blue),
               ColourButton(selectedColor: Colors.yellow),

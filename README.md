@@ -1,6 +1,6 @@
 # drawing_app
 
-A new Flutter application.
+A simple application to show how to use custom painter to draw on a blank screen in flutter
 
 ## Getting Started
 

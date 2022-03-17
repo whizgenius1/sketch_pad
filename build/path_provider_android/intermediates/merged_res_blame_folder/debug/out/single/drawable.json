@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/shopkite/Documents/sketch_pad/build/path_provider_android/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/Users/shopkite/.gradle/caches/transforms-2/files-2.1/ad9df6d145816ddb84ba673ff5e5b213/core-1.6.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/shopkite/Documents/sketch_pad/build/path_provider_android/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/Users/shopkite/.gradle/caches/transforms-2/files-2.1/ad9df6d145816ddb84ba673ff5e5b213/core-1.6.0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/shopkite/Documents/sketch_pad/build/path_provider_android/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/Users/shopkite/.gradle/caches/transforms-2/files-2.1/ad9df6d145816ddb84ba673ff5e5b213/core-1.6.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/shopkite/Documents/sketch_pad/build/path_provider_android/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/Users/shopkite/.gradle/caches/transforms-2/files-2.1/ad9df6d145816ddb84ba673ff5e5b213/core-1.6.0/res/drawable/notification_tile_bg.xml"
+    }
+]

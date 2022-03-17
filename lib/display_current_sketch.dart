@@ -16,7 +16,6 @@ class DisplayCurrentSketch extends StatelessWidget {
       RenderBox box = context.findRenderObject();
       Offset point = box.globalToLocal(details.globalPosition);
       gb.setLine(line: DrawnLine([point], gb.selectedColour, gb.selectedWidth));
-      //line = DrawnLine([point], gb.selectedColour, gb.selectedWidth);
     }
 
     void onPanUpdate(DragUpdateDetails details) {
@@ -26,16 +25,12 @@ class DisplayCurrentSketch extends StatelessWidget {
       List<Offset> path = List.from(gb.line.path)..add(point);
       gb.setLine(line: DrawnLine(path, gb.selectedColour, gb.selectedWidth));
 
-      //  line = DrawnLine(path, selectedColor, selectedWidth);
       gb.setCurrentLineStreamController(line: gb.line);
-      // currentLineStreamController.add(line);
     }
 
     void onPanEnd(DragEndDetails details) {
-      //  lines = List.from(lines)..add(line);
       gb.setLines(lines: List.from(gb.lines)..add(gb.line));
 
-      //  linesStreamController.add(lines);
 
       gb.setLinesStreamController(lines: gb.lines);
     }

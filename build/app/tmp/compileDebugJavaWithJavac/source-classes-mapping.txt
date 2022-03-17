@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/osi/sketch_pad/BuildConfig.java
+ com.osi.sketch_pad.BuildConfig
